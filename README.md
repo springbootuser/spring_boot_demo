@@ -1,5 +1,5 @@
 [Usage]  <br />
-java -jar <project>.jar --spring.config.location=classpath:/demo.yml  <br />
+java -jar ${project}.jar --spring.config.location=classpath:/demo.yml  <br />
   <br />
 [Exposed URI]  <br />
 demo.jar  <br />
