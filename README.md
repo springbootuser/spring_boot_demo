@@ -69,3 +69,9 @@ http://localhost:8085/type/bytes
 http://localhost:8085/type/list
 http://localhost:8085/type/encodedBytes
 ```
+
+### scheduler.jar
+Demontrating microservice with dependency scheduling run
+```
+http://localhost:8086/schedule/load
+```
