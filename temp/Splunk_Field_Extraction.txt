@@ -1,0 +1,4 @@
+rfc5424_syslog : EXTRACT-8998-log4j 
+(?<Date>[\d- :]{19}) (?<Severity>[\w ]{5}) (?<Logger>[\w\.]+) --- \[(?<Thread>[\w\- ]+)\] (?<Class>[\w\.]+) : (?<Message>.*)
+syslog : EXTRACT-syslog : EXTRACT-8996-logback 
+(?<Syslog_Date>[\w \:]{15}) (?<Host>[\d\.]+) ([\w \:]{15}) (?<Hostname>[\w]+) (?<Date>[\d\- :\.]{23}) (?<Severity>[\w ]{5}) (?<Logger>[\w\.]+) --- \[(?<Thread>[\w\- ]+)\] (?<Class>[\w\.]+) : (?<Message>.*)
