@@ -70,7 +70,7 @@ public class StarTrack {
         return list;
     }
 
-    public static void main(final String[] args) {
+    public static void main(String[] args) {
         StarTrack st = new StarTrack();
         int speed;
         String init = null;
