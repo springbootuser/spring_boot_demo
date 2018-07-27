@@ -1,0 +1,9 @@
+---
+applications:
+- name: scheduler
+  memory: 512M
+  instance: 2
+  random-route: true
+  path: ./target/scheduler-0.0.2-SNAPSHOT.jar
+  env:
+    spring.config.location: 'classpath:/demo.yml,classpath:/log4j2.yml'

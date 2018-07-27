@@ -1,0 +1,76 @@
+demo:
+  scheduler:
+    jobList:
+      - jobDetailMap:
+          GroupName:
+            Group: 'group123'
+            Name: 'starter'
+          ExecutionState: TO_BE_EXECUTED
+          ExecutionMode: SYNCHRONIZED
+      - jobDetailMap:
+          GroupName:
+            Group: 'group123'
+            Name: '0'
+          ExecutionState: NOT_YET_EXECUTED
+          ActionUri:
+            - 'http://localhost:8084/type/jsonString'
+          DependentJobDetailMap:
+            - Group: 'group123'
+              Name: 'starter'
+          ExecutionMode: SYNCHRONIZED
+      - jobDetailMap:
+          GroupName:
+            Group: 'group123'
+            Name: '1'
+          ExecutionState: NOT_YET_EXECUTED
+          ActionUri:
+            - 'http://localhost:8084/type/jsonStringInteger'
+          DependentJobDetailMap:
+            - Group: 'group123'
+              Name: 'starter'
+          ExecutionMode: ASYNCHRONIZED
+      - jobDetailMap:
+          GroupName:
+            Group: 'group123'
+            Name: '2'
+          ExecutionState: NOT_YET_EXECUTED
+          ActionUri:
+            - 'http://localhost:8083/type/pojo'
+          DependentJobDetailMap:
+            - Group: 'group123'
+              Name: 'starter'
+            - Group: 'group123'
+              Name: '0'
+            - Group: 'group123'
+              Name: '1'
+          ExecutionMode: SYNCHRONIZED
+      - jobDetailMap:
+          GroupName:
+            Group: 'group123'
+            Name: '3'
+          ExecutionState: NOT_YET_EXECUTED
+          ActionUri:
+            - 'http://localhost:8083/type/map'
+          DependentJobDetailMap:
+            - Group: 'group123'
+              Name: '0'
+          ExecutionMode: SYNCHRONIZED
+      - jobDetailMap:
+          GroupName:
+            Group: 'group123'
+            Name: '4'
+          ExecutionState: NOT_YET_EXECUTED
+          ActionUri:
+            - 'http://localhost:8084/type/jsonObject'
+          DependentJobDetailMap:
+            - Group: 'group123'
+              Name: 'starter'
+            - Group: 'group123'
+              Name: '0'
+            - Group: 'group123'
+              Name: '1'
+            - Group: 'group123'
+              Name: '2'
+            - Group: 'group123'
+              Name: '3'
+          ExecutionMode: ASYNCHRONIZED

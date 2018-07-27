@@ -1,0 +1,47 @@
+Configuration:
+  appenders:
+    Console:
+      name: STDOUT
+      PatternLayout:
+        Pattern: "%d{yyyy-MM-dd HH:mm:ss} %-5level %-36c --- [%-15t] %-36logger : %m%n"
+    Syslog:
+      name: RFC5424
+      format: RFC5424
+      host: localhost
+      port: 8999
+      protocol: TCP
+      appName: SchedulerApp
+      includeMDC: true
+      newLine: true
+      id: com.capgemini.rest.SchedulerApp
+      mdcId: mdc
+    Socket:
+      - name: SOCKET
+        host: localhost
+        port: 8998
+        protocol: TCP
+        PatternLayout:
+          Pattern: "%d{yyyy-MM-dd HH:mm:ss} %-5level %-36c --- [%-15t] %-36logger : %m%n"
+      - name: SOCKET_DEFAULT
+        host: localhost
+        port: 8997
+        protocol: TCP
+      - name: SOCKET_UDP
+        host: localhost
+        port: 8996
+        protocol: UDP
+        PatternLayout:
+          Pattern: "%d{yyyy-MM-dd HH:mm:ss} %-5level %-36c --- [%-15t] %-36logger : %m%n"
+  Loggers:
+    root:
+      level: info
+      AppenderRef:
+      - ref: STDOUT
+    logger:
+      - name: com.capgemini.rest
+        level: debug
+        AppenderRef:
+          - ref: RFC5424
+          - ref: SOCKET
+          - ref: SOCKET_DEFAULT
+          - ref: SOCKET_UDP

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<Console name="STDOUT">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %m%n" />
+		</Console>
+		<Syslog name="RFC5424" format="RFC5424" host="localhost" port="8999"
+			protocol="TCP" appName="SchedulerApp" includeMDC="true" newLine="true"
+			id="SchedulerApp">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %m%n" />
+		</Syslog>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.capgemini.rest" level="debug">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="RFC5424" />
+		</Logger>
+	</Loggers>
+</Configuration>

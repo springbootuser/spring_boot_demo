@@ -1,0 +1,6 @@
+demo:
+  segmentList: SEG1,SEG2
+  demoList:
+    - 'element1'
+    - 'element2'
+  demoValue: demo value from yaml properties

@@ -1,0 +1,15 @@
+demo:
+  child:
+    blocking:
+      scheme: http
+      host: localhost
+      port: 8082
+      path: child/blocking
+    type:
+      stringPath: http://localhost:8084/type/string
+      mapPath: http://localhost:8083/type/map
+      pojoPath: http://localhost:8083/type/pojo
+      jsonStringPath: http://localhost:8084/type/jsonString
+      jsonObjectPath: http://localhost:8084/type/jsonObject
+      bytePath: http://localhost:8085/type/bytes
+      genericPath: http://localhost:8085/type/
