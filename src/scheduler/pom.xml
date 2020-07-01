@@ -24,7 +24,7 @@
 		<org.codehaus.jackson.mapper.asl>1.9.10</org.codehaus.jackson.mapper.asl>
 		<org.apache.commons.io>2.5</org.apache.commons.io>
 		<com.capgemini.rest.model>0.0.1-SNAPSHOT</com.capgemini.rest.model>
-		<org.quartz.scheduler>2.3.0</org.quartz.scheduler>
+		<org.quartz.scheduler>2.3.2</org.quartz.scheduler>
 		<org.apache.logging.log4j>2.8.2</org.apache.logging.log4j>
 	</properties>
 
